@@ -1,53 +1,33 @@
 'use client';
-import {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useState,
-} from 'react';
+import { useEffect, useState } from 'react';
 
-const initialState = {
-  isDarkMode: false,
-  toggle: () => {
-    return;
-  },
-  enableDarkMode: (_: boolean) => {
-    return;
-  },
-  disableDarkMode: (_: boolean) => {
-    return;
-  },
-};
+const useTheme = () => {
+  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isMounted, setIsMounted] = useState(false);
 
-const ThemeContext = createContext(initialState);
-
-export default function ThemeProvider({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(
-    typeof window !== 'undefined' &&
-      JSON.parse(localStorage.getItem('darkMode') || 'true')
-      ? true
-      : false
-  );
-
-  const toggle = useCallback(() => {
-    setIsDarkMode((prev) => !prev);
-  }, []);
-
-  const enableDarkMode = useCallback(() => {
-    setIsDarkMode(true);
-  }, []);
-
-  const disableDarkMode = useCallback(() => {
-    setIsDarkMode(false);
+  useEffect(() => {
+    setIsMounted(true);
+    if (typeof window !== 'undefined') {
+      try {
+        const storedDarkMode = JSON.parse(localStorage.getItem('darkMode') || 'true');
+        setIsDarkMode(storedDarkMode);
+      } catch {
+        setIsDarkMode(true);
+      }
+    }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('darkMode', JSON.stringify(isDarkMode));
+    if (!isMounted) return;
+
+    if (typeof window !== 'undefined') {
+      try {
+        localStorage.setItem('darkMode', JSON.stringify(isDarkMode));
+      } catch {
+        // Handle localStorage error silently
+      }
+    }
+
     if (typeof document !== 'undefined') {
       if (isDarkMode) {
         document.documentElement.classList.add('dark');
@@ -55,22 +35,12 @@ export default function ThemeProvider({
         document.documentElement.classList.remove('dark');
       }
     }
-  }, [isDarkMode]);
+  }, [isDarkMode, isMounted]);
 
-  return (
-    <ThemeContext.Provider
-      value={{
-        isDarkMode,
-        toggle,
-        enableDarkMode,
-        disableDarkMode,
-      }}
-    >
-      {children}
-    </ThemeContext.Provider>
-  );
-}
+  return {
+    isDarkMode,
+    toggleTheme: () => setIsDarkMode(!isDarkMode),
+  };
+};
 
-export function useTheme() {
-  return useContext(ThemeContext);
-}
+export default useTheme;
