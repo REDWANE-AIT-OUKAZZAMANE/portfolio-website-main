@@ -28,6 +28,8 @@ const hideNavWhileScrolling = ({
   offset?: number;
   when: boolean;
 }) => {
+  if (typeof document === 'undefined' || typeof window === 'undefined') return;
+  
   const nav = document.getElementById(id);
   if (!nav) return;
 

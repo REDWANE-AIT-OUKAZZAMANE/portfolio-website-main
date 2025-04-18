@@ -48,10 +48,12 @@ export default function ThemeProvider({
 
   useEffect(() => {
     localStorage.setItem('darkMode', JSON.stringify(isDarkMode));
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
+    if (typeof document !== 'undefined') {
+      if (isDarkMode) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
     }
   }, [isDarkMode]);
 

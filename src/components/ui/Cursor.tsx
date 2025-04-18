@@ -7,10 +7,14 @@ type Props = {
 
 const Cursor = ({ className = '' }: Props) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    addEventListeners();
-    return () => removeEventListeners();
+    setIsMounted(true);
+    if (typeof document !== 'undefined') {
+      addEventListeners();
+      return () => removeEventListeners();
+    }
   }, []);
 
   const addEventListeners = () => {
@@ -24,6 +28,8 @@ const Cursor = ({ className = '' }: Props) => {
   const onMouseMove = (e: MouseEvent) => {
     setPosition({ x: e.clientX, y: e.clientY });
   };
+
+  if (!isMounted) return null;
 
   return (
     <div
