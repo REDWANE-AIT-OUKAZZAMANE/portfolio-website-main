@@ -1,5 +1,5 @@
 'use client';
-import useTheme from '@/lib/hooks/use-theme';
+import { useTheme } from '@/lib/hooks/use-theme';
 import { Icon } from '@iconify/react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -13,7 +13,7 @@ const navItems = [
 ];
 
 const Navbar = ({ id }: { id: string }) => {
-  const { isDarkMode, toggleTheme } = useTheme();
+  const { isDarkMode, toggle } = useTheme();
   const [isVisible, setIsVisible] = useState(true);
   const [isMounted, setIsMounted] = useState(false);
 
@@ -68,7 +68,7 @@ const Navbar = ({ id }: { id: string }) => {
         </ul>
       </div>
       <button
-        onClick={toggleTheme}
+        onClick={toggle}
         className="p-2 duration-200 rounded-lg hover:bg-bg-secondary"
       >
         <Icon

@@ -1,5 +1,5 @@
 import { seoData } from '@/lib/content/portfolio';
-import ThemeProvider from '@/lib/hooks/use-theme';
+import { ThemeProvider } from '@/lib/hooks/use-theme';
 import fontVariables from '@/lib/utils/fonts';
 
 import Cursor from '@/components/ui/Cursor';

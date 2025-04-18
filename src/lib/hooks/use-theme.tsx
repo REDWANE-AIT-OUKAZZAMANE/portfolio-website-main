@@ -1,7 +1,25 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 
-const useTheme = () => {
+interface ThemeContextType {
+  isDarkMode: boolean;
+  toggle: () => void;
+}
+
+const ThemeContext = createContext<ThemeContextType>({
+  isDarkMode: true,
+  toggle: () => {},
+});
+
+export const useTheme = () => {
+  const context = useContext(ThemeContext);
+  if (!context) {
+    throw new Error('useTheme must be used within a ThemeProvider');
+  }
+  return context;
+};
+
+export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isMounted, setIsMounted] = useState(false);
 
@@ -37,10 +55,13 @@ const useTheme = () => {
     }
   }, [isDarkMode, isMounted]);
 
-  return {
-    isDarkMode,
-    toggleTheme: () => setIsDarkMode(!isDarkMode),
-  };
+  const toggle = () => setIsDarkMode(!isDarkMode);
+
+  return (
+    <ThemeContext.Provider value={{ isDarkMode, toggle }}>
+      {children}
+    </ThemeContext.Provider>
+  );
 };
 
-export default useTheme;
+export default ThemeProvider;
