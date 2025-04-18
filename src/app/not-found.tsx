@@ -1,5 +1,9 @@
-import { Button, ShowLottie } from '@/components';
+import { Button } from '@/components';
 import { Layout } from '@/containers';
+import dynamic from 'next/dynamic';
+
+// Dynamically import ShowLottie with SSR disabled
+const ShowLottie = dynamic(() => import('@/components/ui/ShowLottie'), { ssr: false });
 
 const NotFound = () => {
   return (
