@@ -66,6 +66,7 @@ export const projectsSection: ProjectsSectionType = {
     {
       id: getId(),
       name: 'IT Support System',
+      url: 'https://github.com/REDWANE-AIT-OUKAZZAMANE/it-support-system',
       repo: 'https://github.com/REDWANE-AIT-OUKAZZAMANE/it-support-system',
       img: '/projects/itSupport.png',
       year: 2022,

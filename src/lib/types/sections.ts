@@ -66,6 +66,11 @@ export interface ContactSectionType extends Section {
   subtitle?: string;
   paragraphs: string[];
   link: string;
+  contactInfo: {
+    icon: string;
+    text: string;
+    url?: string;
+  }[];
 }
 
 export interface SocialSectionType {
@@ -74,4 +79,31 @@ export interface SocialSectionType {
 
 export interface FooterSectionType extends Section {
   link: string;
+}
+
+export interface CertificatesSectionType extends Section {
+  certificates: {
+    name: string;
+    issuer: string;
+    date: string;
+    url: string;
+  }[];
+}
+
+export interface EducationSectionType extends Section {
+  education: {
+    degree: string;
+    institution: string;
+    location: string;
+    period: string;
+    gpa: string;
+  }[];
+}
+
+export interface LanguagesSectionType extends Section {
+  languages: {
+    name: string;
+    level: string;
+    flag?: string;
+  }[];
 }
