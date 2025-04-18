@@ -1,11 +1,11 @@
 'use client';
-import { SoftwareSkillType } from '@/lib/types';
-import { getId } from '@/lib/utils/helper';
-
-import { ListItem, SkillIcon } from '@/components';
-import dynamic from 'next/dynamic';
 
 import { motion, MotionProps } from 'framer-motion';
+import dynamic from 'next/dynamic';
+
+import { ListItem, SkillIcon } from '@/components';
+import { SoftwareSkillType } from '@/lib/types';
+import { getId } from '@/lib/utils/helper';
 
 // Dynamically import ShowLottie with SSR disabled
 const ShowLottie = dynamic(() => import('@/components/ui/ShowLottie'), { ssr: false });
