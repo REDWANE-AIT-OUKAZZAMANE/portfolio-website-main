@@ -7,9 +7,9 @@ const featuredProjectsSection: FeaturedProjectsSectionType = {
     {
       id: getId(),
       name: 'Karni',
-      description: "Le carnet de crédit sur téléphone qui vous facilite la vie - Une application mobile qui permet aux commerçants de gérer leurs crédits clients.",
+      description: "The phone credit notebook that makes your life easier - A mobile application that allows merchants to manage their customer credits.",
       tasks:
-        "Développement d'une application mobile permettant aux commerçants de suivre et gérer leurs transactions à crédit, d'envoyer des notifications de paiement via WhatsApp ou SMS, et de sécuriser leurs données sur le cloud.",
+        "Development of a mobile application enabling merchants to track and manage their credit transactions, send payment notifications via WhatsApp or SMS, and secure their data in the cloud.",
       url: 'https://karny.ma/fr',
       img: '/projects/karni.png',
       tags: [
@@ -26,9 +26,9 @@ const featuredProjectsSection: FeaturedProjectsSectionType = {
     {
       id: getId(),
       name: 'Express Relais',
-      description: "L'innovation et l'expertise au service de vos colis - Un réseau national de consignes automatiques pour l'envoi et la réception de colis au Maroc.",
+      description: "Innovation and expertise at the service of your packages - A national network of automated lockers for sending and receiving packages in Morocco.",
       tasks:
-        "Développement d'une solution logistique innovante intégrant un réseau de consignes automatiques disponibles 24h/24 et 7j/7 à travers le Maroc. Création d'une plateforme web et mobile permettant de suivre les colis en temps réel et d'automatiser le processus de livraison.",
+        "Development of an innovative logistics solution integrating a network of automated lockers available 24/7 throughout Morocco. Creation of a web and mobile platform allowing real-time package tracking and automation of the delivery process.",
       url: 'https://expressrelais.ma/',
       img: '/projects/express.png',
       tags: [
