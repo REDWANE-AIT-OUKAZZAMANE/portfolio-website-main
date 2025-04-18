@@ -38,3 +38,4 @@ next-env.d.ts
 
 # ignore package-lock if generated (project uses yarn, not npm)
 package-lock.json
+.vercel
