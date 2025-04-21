@@ -57,7 +57,7 @@ export const projectsSection: ProjectsSectionType = {
     {
       id: getId(),
       name: '3D House Visualization',
-      url: 'https://vercel.com/redwane-ait-oukazzamanes-projects/3d-house',
+      url: 'https://3d-house-neon.vercel.app/',
       repo: 'https://github.com/REDWANE-AIT-OUKAZZAMANE/3d-house',
       img: '/projects/house.png',
       year: 2022,
