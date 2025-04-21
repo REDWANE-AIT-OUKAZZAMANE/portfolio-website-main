@@ -11,12 +11,14 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@lottiefiles/react-lottie-player": "^3.5.0",
     "clsx": "^2.0.0",
     "framer-motion": "^9.0.3",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "next": "^13.5.3",
+    "nodemailer": "^6.10.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "save-dev": "^0.0.1-security",
@@ -27,6 +29,7 @@
     "@iconify/react": "^4.0.1",
     "@next/eslint-plugin-next": "^13.4.8",
     "@types/node": "18.11.3",
+    "@types/nodemailer": "^6.4.17",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.61.0",

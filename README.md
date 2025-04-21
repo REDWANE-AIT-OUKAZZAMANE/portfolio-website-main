@@ -19,11 +19,13 @@ Visit [oukazzamane.com](https://oukazzamane.com) to see the live website.
 - Education and certifications
 - Languages proficiency
 - Contact information
+- Interactive contact form
 
 ## 🛠️ Built With
 
 - **Frontend**: Next.js, React, TypeScript, TailwindCSS
 - **Styling**: TailwindCSS, Framer Motion for animations
+- **Email**: EmailJS for contact form
 - **Deployment**: Vercel
 
 ## 📁 Project Structure
@@ -86,6 +88,21 @@ To customize this portfolio with your own information:
 2. Replace project images in `public/projects/`
 3. Update profile image at `public/Me.png`
 4. Customize colors and styling in `tailwind.config.js`
+
+## 📬 Setting Up the Contact Form
+
+The portfolio includes a contact form that uses EmailJS to send emails directly from the client side:
+
+1. Create a free account at [EmailJS](https://www.emailjs.com/)
+2. Create a new email service (Gmail, Outlook, etc.)
+3. Create an email template with these variables:
+   - `from_name` (sender's name)
+   - `reply_to` (sender's email)
+   - `message` (message content)
+4. Update the EmailJS configuration in `src/lib/utils/emailjs-init.ts` with your:
+   - `SERVICE_ID` - Your EmailJS service ID
+   - `TEMPLATE_ID` - Your EmailJS template ID
+   - `PUBLIC_KEY` - Your EmailJS public key
 
 ## 📄 License
 

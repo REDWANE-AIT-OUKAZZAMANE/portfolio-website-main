@@ -1,6 +1,7 @@
 'use client';
 
 export { default as Button } from './buttons/Button';
+export { default as ContactForm } from './ui/ContactForm';
 export { default as DarkModeButton } from './buttons/DarkModeButton';
 export { default as Link } from './buttons/Link';
 export { default as NavButton } from './buttons/NavButton';
