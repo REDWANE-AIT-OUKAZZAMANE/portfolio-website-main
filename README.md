@@ -58,8 +58,8 @@ Visit [oukazzamane.com](https://oukazzamane.com) to see the live website.
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/REDWANE-AIT-OUKAZZAMANE/portfolio-website.git
-   cd portfolio-website
+   git clone https://github.com/REDWANE-AIT-OUKAZZAMANE/portfolio-website-main
+   cd portfolio-website-main
    ```
 
 2. Install dependencies
