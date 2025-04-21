@@ -184,8 +184,6 @@ export async function POST(request: Request) {
             </div>
             
             <div class="content">
-              <a href="mailto:${email}" class="btn">Reply to ${fullName}</a>
-              
               <div class="info-section">
                 <div class="info-item">
                   <span class="label">From:</span>
