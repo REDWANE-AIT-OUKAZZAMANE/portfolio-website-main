@@ -12,7 +12,7 @@ export const educationSection: EducationSectionType = {
       gpa: '16 / 20',
     },
     {
-      degree: 'Bachelor\'s degree in computer science SMI',
+      degree: 'BACHELOR\'S DEGREE IN COMPUTER SCIENCE SMI',
       institution: 'Abdelmalek Essaâdi University',
       location: 'Tétouan',
       period: 'Sep 2018 - Jun 2020',
