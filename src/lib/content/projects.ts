@@ -6,6 +6,14 @@ export const projectsSection: ProjectsSectionType = {
   projects: [
     {
       id: getId(),
+      name: 'Sporgates',
+      url: 'https://sporgates.com',
+      img: '/projects/sporgates.png',
+      year: 2026,
+      tags: ['Web App', 'Next.js', 'Spring Boot', 'MongoDB'],
+    },
+    {
+      id: getId(),
       name: 'Karni',
       url: 'https://karny.ma/fr',
       img: '/projects/karni.png',
@@ -31,7 +39,7 @@ export const projectsSection: ProjectsSectionType = {
     {
       id: getId(),
       name: 'Authentikeys E-commerce',
-      url: 'https://www.authentikeys.com',
+      url: 'https://authentikeys-redwane-ait-oukazzamanes-projects.vercel.app',
       img: '/projects/authentikeys.png',
       year: 2024,
       tags: ['React', 'Next.js', 'Node.js', 'MongoDB'],

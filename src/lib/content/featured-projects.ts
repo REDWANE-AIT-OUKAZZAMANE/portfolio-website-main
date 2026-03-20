@@ -6,6 +6,44 @@ const featuredProjectsSection: FeaturedProjectsSectionType = {
   projects: [
     {
       id: getId(),
+      name: 'Sporgates',
+      description:
+        'A sports community and business platform to discover activities, book facilities, build squads, and help organizers grow.',
+      tasks:
+        'Co-founded the product and built the full stack: Spring Boot REST API with JWT, MongoDB, OpenAPI docs, and a Next.js web app with landing, auth, and core user flows. Own architecture, security, and delivery from backend through frontend integration.',
+      url: 'https://sporgates.com',
+      img: '/projects/sporgates.png',
+      tags: [
+        'Next.js',
+        'Spring Boot',
+        'MongoDB',
+        'REST API',
+        'JWT',
+        'TypeScript',
+        'Java',
+      ],
+    },
+    {
+      id: getId(),
+      name: 'Squarefeet CRM',
+      description: 'A comprehensive CRM solution for real estate management, featuring lead optimization, asset management, and transaction tracking.',
+      tasks:
+        "Developed a unified platform that integrates all types of leasing (Standard, Specialty, and Media) into a single solution, enabling unmatched commercial efficiency. Automated marketing materials, leasing documents, and floor plans while ensuring system scalability.",
+      url: 'https://www.squarefeet.cloud/fr/accueil/',
+      img: '/projects/squarefeet.png',
+      tags: [
+        'Vue.js',
+        'React',
+        'NestJS',
+        'GraphQL',
+        'Prisma',
+        'CRM',
+        'GitLab',
+        'Nginx'
+      ],
+    },
+    {
+      id: getId(),
       name: 'Karni',
       description: "The phone credit notebook that makes your life easier - A mobile application that allows merchants to manage their customer credits.",
       tasks:
@@ -44,30 +82,11 @@ const featuredProjectsSection: FeaturedProjectsSectionType = {
     },
     {
       id: getId(),
-      name: 'Squarefeet CRM',
-      description: 'A comprehensive CRM solution for real estate management, featuring lead optimization, asset management, and transaction tracking.',
-      tasks:
-        "Developed a unified platform that integrates all types of leasing (Standard, Specialty, and Media) into a single solution, enabling unmatched commercial efficiency. Automated marketing materials, leasing documents, and floor plans while ensuring system scalability.",
-      url: 'https://www.squarefeet.cloud/fr/accueil/',
-      img: '/projects/squarefeet.png',
-      tags: [
-        'Vue.js',
-        'React',
-        'NestJS',
-        'GraphQL',
-        'Prisma',
-        'CRM',
-        'GitLab',
-        'Nginx'
-      ],
-    },
-    {
-      id: getId(),
       name: 'Authentikeys E-commerce',
       description: 'A modern e-commerce platform for tech products featuring product categories, brand showcases, and a blog section.',
       tasks:
         'Built a complete e-commerce solution with user authentication, shopping cart functionality, and payment integration. Created responsive interfaces and implemented secure payment processing systems.',
-      url: 'https://www.authentikeys.com',
+      url: 'https://authentikeys-redwane-ait-oukazzamanes-projects.vercel.app',
       img: '/projects/authentikeys.png',
       tags: ['React', 'Next.js', 'Tailwind CSS', 'Node.js', 'Express', 'MongoDB'],
     },

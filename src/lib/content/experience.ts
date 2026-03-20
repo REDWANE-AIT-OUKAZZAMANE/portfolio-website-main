@@ -4,6 +4,18 @@ export const experienceSection: ExperienceSectionType = {
   title: "where i've worked",
   experiences: [
     {
+      company: 'Sporgates',
+      companyUrl: 'https://sporgates.com',
+      role: 'co-founder & cto',
+      started: '2024',
+      upto: 'present',
+      tasks: [
+        'Co-founded and lead technical strategy for a sports and fitness platform (Next.js, Spring Boot, MongoDB).',
+        'Designed and shipped REST APIs with JWT auth, role-based access, OpenAPI docs, and production-ready infrastructure.',
+        'Own end-to-end architecture from backend services to web app, performance, and integration with the product roadmap.',
+      ],
+    },
+    {
       company: 'Squarefeet',
       companyUrl: 'https://www.squarefeet.cloud/fr/accueil/',
       role: 'full stack engineer | cybersecurity specialist',
