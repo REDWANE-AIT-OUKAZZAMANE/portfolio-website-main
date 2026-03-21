@@ -2,7 +2,7 @@ export const sporgatesCaseStudy = {
   title: 'Sporgates',
   role: 'Co-founder & CTO',
   summary:
-    'Sports community and business platform: discovery, facility booking, squads, leagues, and organizer tooling—built as a full-stack product with a documented API and a modern web app.',
+    'Sports community and business platform: discovery, facility booking, squads, leagues, and organizer tooling built as a full-stack product with a documented API and a modern web app.',
 
   problem: `Athletes and organizers were stuck between spreadsheets, phone calls, and disconnected apps. There was no single place to discover sessions, book venues, run squads, or grow a sports business with a consistent product experience.`,
 
