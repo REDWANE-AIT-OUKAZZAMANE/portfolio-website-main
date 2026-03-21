@@ -7,7 +7,7 @@ export const experienceSection: ExperienceSectionType = {
       company: 'Sporgates',
       companyUrl: 'https://sporgates.com',
       role: 'co-founder & cto',
-      started: '2024',
+      started: '2026',
       upto: 'present',
       tasks: [
         'Co-founded and lead technical strategy for a sports and fitness platform (Next.js, Spring Boot, MongoDB).',
