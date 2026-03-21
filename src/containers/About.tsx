@@ -23,13 +23,14 @@ const About = () => {
       <main className="flex flex-col items-center gap-16 lg:items-start lg:flex-row">
         <div className="space-y-4 lg:w-3/5">
           <p>
-            Hi, my name is REDWANE AIT OUKAZZAMANE, Developer with a Bachelor's degree in Computer Science from{' '}
+            Hi, my name is REDWANE AIT OUKAZZAMANE. I hold a Master of Science in Software Engineering from{' '}
             <Link
-              href="https://fs.uae.ac.ma/"
+              href="https://ensat.ac.ma/"
               target="_blank"
+              rel="noopener noreferrer"
               className="text-accent"
             >
-              Abdelmalek Essaadi University
+              ENSA | Tétouan
             </Link>
             .
           </p>
