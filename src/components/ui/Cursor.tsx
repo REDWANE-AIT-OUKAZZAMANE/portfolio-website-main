@@ -1,4 +1,6 @@
 'use client';
+import { usePrefersReducedMotion } from '@/lib/hooks/use-reduced-motion';
+
 import { useEffect, useState } from 'react';
 
 type Props = {
@@ -6,6 +8,7 @@ type Props = {
 };
 
 const Cursor = ({ className = '' }: Props) => {
+  const prefersReducedMotion = usePrefersReducedMotion();
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isMounted, setIsMounted] = useState(false);
 
@@ -29,7 +32,7 @@ const Cursor = ({ className = '' }: Props) => {
     setPosition({ x: e.clientX, y: e.clientY });
   };
 
-  if (!isMounted) return null;
+  if (!isMounted || prefersReducedMotion) return null;
 
   return (
     <div

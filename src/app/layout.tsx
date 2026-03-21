@@ -2,6 +2,7 @@ import { seoData } from '@/lib/content/portfolio';
 import { ThemeProvider } from '@/lib/hooks/use-theme';
 import fontVariables from '@/lib/utils/fonts';
 
+import { AppMotion } from '@/components/providers/AppMotion';
 import Cursor from '@/components/ui/Cursor';
 
 import '../styles/globals.css';
@@ -80,7 +81,9 @@ export default function RootLayout({
       </head>
       <body className={`text-text bg-bg ${fontVariables}`}>
         <Cursor className="hidden dark:lg:block" />
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <AppMotion>{children}</AppMotion>
+        </ThemeProvider>
       </body>
     </html>
   );

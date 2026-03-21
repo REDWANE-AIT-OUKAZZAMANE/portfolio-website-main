@@ -25,6 +25,7 @@ export interface HeroSectionType extends Section {
   cta?: CTAType & {
     hideInDesktop?: boolean;
   };
+  secondaryCta?: CTAType;
 }
 
 export interface AboutSectionType extends Section {

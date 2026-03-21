@@ -10,39 +10,6 @@ import useWindowWidth from '@/lib/hooks/use-window-width';
 import { getBreakpointsWidth } from '@/lib/utils/helper';
 import { fadeIn, slideIn } from '@/styles/animations';
 
-/**
- * Hides the navbar while scrolling down
- * @param {Object} config
- * @param {String} [config.id=navbar] - id of navbar
- * @param {Number} [config.offset=100] - offset of navbar in px
- */
-
-const hideNavWhileScrolling = ({
-  id = 'navbar',
-  offset = 100,
-  when = true,
-}: {
-  id?: string;
-  offset?: number;
-  when: boolean;
-}) => {
-  if (typeof document === 'undefined' || typeof window === 'undefined') return;
-
-  const nav = document.getElementById(id);
-  if (!nav) return;
-
-  let prevScrollPos = window.pageYOffset;
-
-  window.onscroll = () => {
-    if (when) {
-      const curScrollPos = window.pageYOffset;
-      if (prevScrollPos < curScrollPos) nav.style.top = `-${offset}px`;
-      else nav.style.top = '0';
-      prevScrollPos = curScrollPos;
-    }
-  };
-};
-
 type NavItemsProps = {
   href?: string;
   children: React.ReactNode;
@@ -80,7 +47,23 @@ const Navbar = () => {
   const ANIMATION_DELAY = windowWidth <= md ? 0 : 0.8;
 
   useEffect(() => {
-    hideNavWhileScrolling({ when: !navbarCollapsed });
+    if (navbarCollapsed) return;
+
+    const nav = document.getElementById('navbar');
+    if (!nav) return;
+
+    const offset = 100;
+    let prevScrollPos = window.scrollY;
+
+    const onScroll = () => {
+      const curScrollPos = window.scrollY;
+      if (prevScrollPos < curScrollPos) nav.style.top = `-${offset}px`;
+      else nav.style.top = '0';
+      prevScrollPos = curScrollPos;
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, [navbarCollapsed]);
 
   return (
@@ -91,12 +74,12 @@ const Navbar = () => {
       id="navbar"
       className="fixed inset-x-0 top-0 right-0 z-50 flex items-end justify-between px-8 py-4 duration-500 md:px-6 xl:px-12 backdrop-blur-lg"
     >
-      <h1 className="relative text-2xl capitalize font-signature text-accent group top-1">
+      <p className="relative text-2xl capitalize font-signature text-accent group top-1 m-0">
         <Link href="/#hero" className="block">
           Oukazzamane
-          <div className="absolute bottom-1.5 left-0 h-[1px] w-0 group-hover:w-full bg-accent duration-300"></div>
+          <span className="absolute bottom-1.5 left-0 h-[1px] w-0 group-hover:w-full bg-accent duration-300 block" />
         </Link>
-      </h1>
+      </p>
 
       <NavButton
         onClick={() => {

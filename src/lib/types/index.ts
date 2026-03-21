@@ -39,6 +39,10 @@ export interface FeaturedProjectType
   description: string;
   repo?: string;
   tasks?: string;
+  problem?: string;
+  decisions?: string[];
+  impact?: string;
+  caseStudyUrl?: string;
 }
 
 export type StringKeyValueType = {

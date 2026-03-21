@@ -1,3 +1,4 @@
+import { socialLinks } from '@/lib/content/portfolio';
 import { HeroSectionType } from '@/lib/types/sections';
 import { resumeFileName } from '@/lib/utils/config';
 
@@ -6,11 +7,17 @@ export const heroSection: HeroSectionType = {
   title: 'REDWANE AIT OUKAZZAMANE.',
   tagline: 'I create sleek, scalable digital solutions.',
   description:
-    "Senior Developer with 4 years of experience crafting sleek, scalable digital solutions. Co-founder and CTO of Sporgates, where I build a sports and fitness platform from API to web app. I blend code and creativity to build user-centric apps, from elegant UIs to robust backends. Known for delivering complex, enterprise-level projects with precision and flair across diverse industries.",
-  specialText: 'Currently available for new opportunities',
+    "Senior full-stack engineer with 4 years shipping production systems. Co-founder and CTO of Sporgates, building a sports and fitness platform from API to web app.",
+  specialText:
+    'Co-founder & CTO of Sporgates. Open to consulting and advisory.',
   cta: {
     title: 'see my resume',
     url: `/${resumeFileName}`,
-    hideInDesktop: true,
+    hideInDesktop: false,
+  },
+  secondaryCta: {
+    title: 'LinkedIn',
+    url: socialLinks.linkedin,
+    sameTab: false,
   },
 };

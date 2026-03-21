@@ -9,8 +9,9 @@ const featuredProjectsSection: FeaturedProjectsSectionType = {
       name: 'Sporgates',
       description:
         'A sports community and business platform to discover activities, book facilities, build squads, and help organizers grow.',
+      caseStudyUrl: '/work/sporgates',
       tasks:
-        'Co-founded the product and built the full stack: Spring Boot REST API with JWT, MongoDB, OpenAPI docs, and a Next.js web app with landing, auth, and core user flows. Own architecture, security, and delivery from backend through frontend integration.',
+        'Co-founder & CTO: Spring Boot API (JWT, OpenAPI), MongoDB, and Next.js from landing through core product flows.',
       url: 'https://sporgates.com',
       img: '/projects/sporgates.png',
       tags: [

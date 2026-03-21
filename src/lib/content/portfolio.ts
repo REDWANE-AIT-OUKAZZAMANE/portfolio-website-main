@@ -22,9 +22,9 @@ export const author = {
 export const seoData = {
   title: 'REDWANE AIT OUKAZZAMANE | FULLSTACK ENGINEER',
   description:
-    'Senior Developer with 4 years of experience crafting sleek, scalable digital solutions across diverse industries.',
+    'Full-stack engineer, co-founder & CTO of Sporgates. Open to consulting and advisory. Building scalable web platforms from API to UI.',
   author: author.name,
-  image: '/projects/squarefeet.png',
+  image: '/og.png',
   url: 'https://oukazzamane.com',
   keywords: [
     'Redwane',
@@ -39,5 +39,8 @@ export const seoData = {
     'NestJS',
     'Java',
     'Spring Boot',
+    'CTO',
+    'Sporgates',
+    'Consulting',
   ],
 };

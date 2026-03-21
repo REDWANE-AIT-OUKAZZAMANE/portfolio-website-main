@@ -10,7 +10,7 @@ import { slideUp } from '@/styles/animations';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
-  const { cta, subtitle, title, tagline, description, specialText } =
+  const { cta, secondaryCta, subtitle, title, tagline, description, specialText } =
     heroSection;
 
   const windowWidth = useWindowWidth();
@@ -43,14 +43,14 @@ const Hero = () => {
         >
           {title}
         </motion.h1>
-        <motion.h1
+        <motion.p
           variants={slideUp({ delay: getAnimationDelay(2) })}
           initial="hidden"
           animate="show"
-          className="leading-[1.2]"
+          className="text-4xl font-bold tracking-tighter md:text-7xl leading-[1.2]"
         >
           {tagline}
-        </motion.h1>
+        </motion.p>
       </div>
 
       <motion.p
@@ -71,21 +71,36 @@ const Hero = () => {
         {specialText}
       </motion.p>
 
-      {cta && (
-        <Button
-          size="lg"
-          type="link"
-          variants={slideUp({ delay: getAnimationDelay(5) })}
-          initial="hidden"
-          animate="show"
-          href={cta?.url ?? '#'}
-          className={`mt-5 xs:mt-8 md:mt-10 ${
-            cta.hideInDesktop ? 'md:hidden' : ''
-          }`}
-          sameTab={cta?.sameTab}
-        >
-          {cta.title}
-        </Button>
+      {(cta || secondaryCta) && (
+        <div className="flex flex-wrap items-center gap-4 mt-5 xs:mt-8 md:mt-10">
+          {cta && (
+            <Button
+              size="lg"
+              type="link"
+              variants={slideUp({ delay: getAnimationDelay(5) })}
+              initial="hidden"
+              animate="show"
+              href={cta.url ?? '#'}
+              className={cta.hideInDesktop ? 'md:hidden' : ''}
+              sameTab={cta?.sameTab}
+            >
+              {cta.title}
+            </Button>
+          )}
+          {secondaryCta && (
+            <Button
+              size="lg"
+              type="link"
+              variants={slideUp({ delay: getAnimationDelay(6) })}
+              initial="hidden"
+              animate="show"
+              href={secondaryCta.url}
+              sameTab={secondaryCta.sameTab}
+            >
+              {secondaryCta.title}
+            </Button>
+          )}
+        </div>
       )}
     </Wrapper>
   );
